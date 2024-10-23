@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_big_shop/screens/GenreScreen.dart';
 import 'package:flutter_big_shop/screens/HomeScreen.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(title: 'home',)
+      home: GenreScreen(title: 'Genre',)
     );
   }
 }
