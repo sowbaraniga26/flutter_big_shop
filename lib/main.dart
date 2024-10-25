@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: GenreScreen(title: 'Genre',)
-      home: BrandScreen(title: 'Brand',)
+      home: GenreScreen(title: 'Genre',)
     );
   }
 }
