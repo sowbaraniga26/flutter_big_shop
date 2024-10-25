@@ -82,6 +82,15 @@ class _BrandScreenState extends State<BrandScreen> {
 
                 return ListTile(
                   title: Text(brands[index].name),
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                      brands[index].image_path,
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.scaleDown,
+                    ),
+                ),
                   onTap: () {},
                 );
               }
