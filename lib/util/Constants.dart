@@ -10,6 +10,8 @@ class Constants{
 
   static const String SONG_ROUTE="/songs";
 
+  static const String SONG_FILTER_BY_GENRE_ROUTE="/songs?genre_id=";
+
 
 
 

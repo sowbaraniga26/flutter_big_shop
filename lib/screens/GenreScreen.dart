@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_big_shop/screens/song/SongFilterByGenreScreen.dart';
 import 'package:http/http.dart' as http;
 
 import '../models/Genre.dart';
@@ -80,7 +81,14 @@ class _GenreScreenState extends State<GenreScreen> {
 
               return ListTile(
                 title: Text(genres[index].name),
-                onTap: () {},
+                onTap: () {
+                  // Navigator.pop(context);
+
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => SongFilterByGenreScreen(title: genres[index].name, genre: genres[index],)),
+                  );
+                },
               );
             }
         )
