@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GenreScreen(title: 'Genre',)
+      // home: GenreScreen(title: 'Genre',)
+      home: BrandScreen(title: 'Brand'),
       // home: SongScreen(title: 'Song',)
     );
   }

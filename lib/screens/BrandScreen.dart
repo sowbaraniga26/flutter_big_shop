@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_big_shop/screens/song/SongFilterByBrandScreen.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -91,7 +92,12 @@ class _BrandScreenState extends State<BrandScreen> {
                       fit: BoxFit.scaleDown,
                     ),
                 ),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => SongFilterByBrandScreen(title: brands[index].name, brand: brands[index],)),
+                    );
+                  },
                 );
               }
             )
