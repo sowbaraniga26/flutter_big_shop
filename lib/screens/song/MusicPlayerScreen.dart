@@ -20,7 +20,18 @@ class _MusicPlayerScreenState extends State<MusicPlayerScreen> {
         title: Text(widget.song.name),
       ),
       body: Center(
-        child: Text(widget.song.name),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+             Image.network(
+               widget.song.image_path,
+               height: 200,
+               width: 200,
+             ),
+             SizedBox(height:20),
+             Text(widget.song.name)
+          ],
+        ),
       ),
     );
   }
