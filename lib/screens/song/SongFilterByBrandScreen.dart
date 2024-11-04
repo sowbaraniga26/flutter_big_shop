@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_big_shop/screens/song/MusicPlayerScreen.dart';
 
 
 import 'package:http/http.dart' as http;
@@ -93,6 +94,10 @@ class _SongFilterByBrandScreenState extends State<SongFilterByBrandScreen> {
                   // 'qty' : 3
                 };
 
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                      builder: (context) => MusicPlayerScreen(song: songs[index])),
+                );
 
               },
             );
