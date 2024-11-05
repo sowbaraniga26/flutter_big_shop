@@ -4,11 +4,13 @@ class Brand {
   String name;
   String image_path;
 
+
   Brand({
 
     required this.id,
     required this.name,
     required this.image_path,
+
 });
 
   Brand.fromJson(Map<String, dynamic> json)
