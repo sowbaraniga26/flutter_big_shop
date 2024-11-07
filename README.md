@@ -2,5 +2,5 @@
 
 ![Image](screenshot/Brand.png)
 ![Image](screenshot/Genre.png)
-![image](screenshot/Music play and pause img.png)
-![image](screenshot/Music play and pause img2.png)
+![image](screenshot/Music_play.png)
+![image](screenshot/Music_pause.png)
