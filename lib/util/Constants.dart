@@ -1,6 +1,6 @@
 class Constants{
 
-  static const String SERVER_DOMAIN= "http://192.168.0.104:8000";
+  static const String SERVER_DOMAIN= "http://192.168.0.105:8000";
 
   static const String BASE_URL = SERVER_DOMAIN + "/api";
 
