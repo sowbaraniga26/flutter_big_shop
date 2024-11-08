@@ -17,21 +17,43 @@ class _MusicPlayerScreenState extends State<MusicPlayerScreen> {
 
   final player = AudioPlayer();
   bool isPlaying =false;
+  Duration currentPosition = Duration.zero;
+  Duration totalDuration = Duration.zero;
 
    @override
    void initState() {
 
      super.initState();
        super.initState();
-       player.onPlayerStateChanged.listen((state) {
+
+     // Listen to player state changes
+
+     player.onPlayerStateChanged.listen((state) {
          setState(() {
 
            isPlaying =state ==PlayerState.playing;
          });
        });
+
+     // Listen to audio position changes
+     player.onPositionChanged.listen((position) {
+       setState(() {
+         currentPosition =position;
+       });
+     });
+
+
+     // Listen to total duration of audio file
+
+     player.onDurationChanged.listen((duration) {
+       setState(() {
+         totalDuration =duration;
+       });
+     });
    }
 
-  @override
+
+   @override
   void dispose() {
      player.stop();
      player.dispose();
@@ -44,6 +66,14 @@ class _MusicPlayerScreenState extends State<MusicPlayerScreen> {
      }else {
        await player.play(UrlSource(widget.song.song_path));
      }
+  }
+
+
+  String formatTime(Duration duration) {
+
+     String minutes =duration.inMinutes.toString().padLeft(2, '0');
+     String seconds = (duration.inSeconds % 60).toString().padLeft(2, '0');
+     return "$minutes:$seconds";
   }
 
 
@@ -70,7 +100,27 @@ class _MusicPlayerScreenState extends State<MusicPlayerScreen> {
                  widget.song.name
              ),
              SizedBox(height:20),
+             Slider(
+               min:0,
+               max: totalDuration.inSeconds.toDouble(),
+               value: currentPosition.inSeconds.toDouble(),
+               onChanged: (value) async {
+                 await player.seek(Duration(seconds: value.toInt()));
+               },
+             ),
              // Text(widget.song.song_path)
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(formatTime(currentPosition)),
+                  Text(formatTime(totalDuration)),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
 
             TextButton(
                 onPressed: playPauseAudio,
