@@ -4,3 +4,4 @@
 ![Image](screenshot/Genre.png)
 ![image](screenshot/Music_play.png)
 ![image](screenshot/Music_pause.png)
+![image](screenshot/MusicPlayer_Duration_Seekbar.png)
