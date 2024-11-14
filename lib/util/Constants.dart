@@ -1,6 +1,6 @@
 class Constants{
 
-  static const String SERVER_DOMAIN= "http://192.168.0.105:8000";
+  static const String SERVER_DOMAIN= "http://192.168.0.110:8000";
 
   static const String BASE_URL = SERVER_DOMAIN + "/api";
 
@@ -14,6 +14,14 @@ class Constants{
 
 
   static const String SONG_FILTER_BY_BRAND_ROUTE="/songs?brand_id=";
+
+  static const String LOGIN_ROUTE = "/login";
+
+  static const String LOGOUT_ROUTE ="/user/revoke";
+
+  static const String USER_REGISTER_ROUTE ="/register";
+
+  static const String USER_INFO_ROUTE ="/user";
 
 
 
