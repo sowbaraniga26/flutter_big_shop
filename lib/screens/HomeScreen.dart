@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_big_shop/screens/song/RegisterScreen.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:provider/provider.dart';
 
@@ -70,18 +71,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         );
                       },
                     ),
-                    // ListTile(
-                    //   title: Text('Register'),
-                    //   leading: Icon(Icons.app_registration),
-                    //   onTap: () {
-                    //     //Handle logout logic
-                    //     Navigator.pop(context);
-                    //     Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(builder: (context) => RegisterScreen(title: 'Register')),
-                    //     );
-                    //   },
-                    // ),
+                    ListTile(
+                      title: Text('Register'),
+                      leading: Icon(Icons.app_registration),
+                      onTap: () {
+                        //Handle logout logic
+                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RegisterScreen(title: 'Register')),
+                        );
+                      },
+                    ),
                   ]
               );
             }

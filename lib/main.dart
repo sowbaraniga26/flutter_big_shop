@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_big_shop/screens/GenreScreen.dart';
 import 'package:flutter_big_shop/screens/HomeScreen.dart';
 import 'package:flutter_big_shop/screens/BrandScreen.dart';
+import 'package:flutter_big_shop/screens/song/RegisterScreen.dart';
 import 'package:flutter_big_shop/screens/song/SongScreen.dart';
 import 'package:flutter_big_shop/services/Auth.dart';
 import 'package:provider/provider.dart';

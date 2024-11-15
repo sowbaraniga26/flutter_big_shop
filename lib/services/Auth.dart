@@ -72,8 +72,8 @@ class Auth extends ChangeNotifier {
     try {
       print('Logout started');
 
-      Dio.Response response = await dio().get(
-        '/user/revoke',
+      Dio.Response response = await dio().post(
+        Constants.LOGOUT_ROUTE,
         options: Dio.Options(headers: {'Authorization': 'Bearer $token'}),
       );
 
@@ -85,6 +85,7 @@ class Auth extends ChangeNotifier {
       print('Logout ended');
     } catch (e) {
       print('Logout Error: $e');
+      print(Constants.LOGOUT_ROUTE);
     }
   }
 
